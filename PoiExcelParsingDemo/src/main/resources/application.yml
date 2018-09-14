@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: xml-parsing
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      file-size-threshold: 2MB
+      max-request-size: 215MB
+      
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: postgres 
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+     hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation : true   
+server:
+  port: 9100
+  
+ 
+  
